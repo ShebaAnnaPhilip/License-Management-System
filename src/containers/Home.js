@@ -2,30 +2,36 @@ import React from "react";
 import Header from "./Header";
 import "../App.css";
 import { Link } from "react-router-dom";
+import Calculator from "./Calculator";
 
 export default function Home() {
+
+
   return (
     <div className="home">
       <Header />
       <div className="main">
         <div className="call-to-action">
+        
           <div>
-            <h1>Punny headline</h1>
-            <p>
-              And an even wittier subheading to boot. Jumpstart your new Rustr
+            <div className="home-titles">Enterprise License Management System</div>
+            <p className="home-text">
+            A profitable startup selling the worlds best purpose built 'enterprise license management system'. Jumpstart your new Rustr
               service and start growing your business now.
             </p>
-            <Link className="home-link">Sign Up Now</Link>
+            <button className="home-btn">Sign Up Now</button>
           </div>
+       
         </div>
         <div className="call-to-action">
           <div>
-            <h1>Pricing</h1>
-            <p>
+          <div className="home-titles">Pricing</div>
+          <p className="home-text">
               Quickly build your enterprise with these unbeatable customer
               prices. It's built to grow with you, and help you grow. Get
               started with our <b>30</b> day free trial.
             </p>
+            <div className="home-borderline"/>
           </div>
         </div>
 
@@ -33,7 +39,7 @@ export default function Home() {
           <div>
             <div>
               <div>
-                <h4>Client License</h4>
+                <h3>Client License</h3>
               </div>
               <div>
                 <h1>
@@ -51,7 +57,7 @@ export default function Home() {
           <div>
             <div>
               <div>
-                <h4>Server License</h4>
+                <h3>Server License</h3>
               </div>
               <div>
                 <h1>
@@ -63,14 +69,14 @@ export default function Home() {
                   <li>Basic Monitoring Integration</li>
                   <li>Help center access</li>
                 </ul>
-                <button type="button">Get started</button>
+                <button className="home-btn" type="button">Get started</button>
               </div>
             </div>
           </div>
           <div>
             <div>
               <div>
-                <h4>Enterprise License</h4>
+                <h3>Enterprise License</h3>
               </div>
               <div>
                 <h1>
@@ -82,52 +88,11 @@ export default function Home() {
                   <li>we manage updates for your server.</li>
                   <li>priority support</li>
                 </ul>
-                <button type="button">Sign up for free</button>
               </div>
             </div>
           </div>
         </div>
-        <div className="calculator">
-          <div>
-            <h2>The best pricing model</h2>
-            <p>
-              Enter how many endpoints and servers you intend to run, and
-              calculate the TCO of your switch to Rustr.
-            </p>
-          </div>
-          <div id="calculator__form">
-            <dl>
-              <dt>
-                <label for="clientLicenses"> # of clients</label>
-              </dt>
-              <dd>
-                <input
-                  id="clientLicenses"
-                  name="clientLicenses"
-                  value="1"
-                  type="number"
-                />
-              </dd>
-              <dt>
-                <label for="serverLicenses"># of servers</label>
-              </dt>
-              <dd>
-                <input
-                  id="serverLicenses"
-                  name="serverLicenses"
-                  value="1"
-                  type="number"
-                />
-              </dd>
-            </dl>
-
-            <div className="calculator__result"></div>
-
-            <div>
-              <button>Reserve Licenses Now</button>
-            </div>
-          </div>
-        </div>
+       <Calculator/>
         <div className="footer">
           <div className="footer-title">
             Rustr Inc
