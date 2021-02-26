@@ -38,3 +38,21 @@ You are a new developer joining the Rustr team, a profitable startup selling the
 - Improve typography
 - Improve the build system, add typescript, css preprocessor, framework
 - Create an API for the server calculator. 
+
+**Steps to run the application locally**
+
+## Install the GUI
+
+-   Clone the repo `https://github.com/ShebaAnnaPhilip/License-Management-System.git`
+-   Go to `/License-Management-System`
+-   `npm install`
+
+## Start the GUI
+
+-   Go to `/License-Management-System`
+-   `npm start`
+-   That will open a browser to `http://localhost:3000/#/`
+
+## Scripts
+
+- `npm start`: Starts the app in development
