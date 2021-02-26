@@ -4,6 +4,7 @@ import '../App.css'
 export default function Calculator() {
   const [clientCount, setClientCount] = useState(1);
   const [serverCount, setServerCount] = useState(1);
+  const [enterpriseCount, setEnterpriseCount] = useState(1);
 
   function startCalculator({ selector }) {
     const $root = document.querySelector(selector);
@@ -25,7 +26,7 @@ export default function Calculator() {
       }
       if (formState.clientLicenses && formState.serverLicenses) {
         const result =
-          formState.clientLicenses * 10 + formState.serverLicenses * 30;
+          formState.serverLicenses * 15 + formState.enterpriseLicenses * 29;
         $el.innerHTML = `
             <dl>
                 <dt>Total Cost of Ownership (TCO)</dt>
@@ -81,11 +82,13 @@ export default function Calculator() {
               name="clientLicenses"
               value={clientCount}
               type="number"
+              min="0"
               onChange={(e) => {
                 setClientCount(e.target.value);
               }}
             />
           </dd>
+
           <dt>
             <label for="serverLicenses"># of servers</label>
           </dt>
@@ -95,8 +98,25 @@ export default function Calculator() {
               name="serverLicenses"
               value={serverCount}
               type="number"
+              min="0"
               onChange={(e) => {
                 setServerCount(e.target.value);
+              }}
+            />
+          </dd>
+
+          <dt>
+            <label for="enterpriseLicenses"># of enterprise</label>
+          </dt>
+          <dd>
+            <input
+              id="enterpriseLicenses"
+              name="enterpriseLicenses"
+              value={enterpriseCount}
+              type="number"
+              min="0"
+              onChange={(e) => {
+                setEnterpriseCount(e.target.value);
               }}
             />
           </dd>
